@@ -3,40 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaya Maheedhar Manthripragada </title>
+  <title>Jaya Maheedhar Manthripragada</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; background: #f7fafc; color: #1a202c; }
-    header { margin-bottom: 2rem; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.5rem; margin-top: 2rem; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f7fafc;
+      color: #1a202c;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.3rem;
+    }
+
+    p { max-width: 800px; margin: auto; }
+
     a { color: #3182ce; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    section { margin-bottom: 2rem; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .nav-button {
+      background-color: #3182ce;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .nav-button:hover {
+      background-color: #2b6cb0;
+      transform: translateY(-2px);
+    }
+
+    section {
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Jaya Maheedhar Manthripragada</h1>
-  <p>PhD Student — Mathematics, University of Illinois, Urbana Champaign</p>
-  <p>Email: jm66[at]illinois[dot]edu</a></p>
+  <p>PhD Student — Mathematics, University of Illinois, Urbana-Champaign</p>
+  <p>Email: jm66[at]illinois[dot]edu</p>
 </header>
 
-<section>
+<nav>
+  <a href="#research"><button class="nav-button">Research</button></a>
+  <a href="#teaching"><button class="nav-button">Teaching</button></a>
+  <a href="#cv"><button class="nav-button">CV</button></a>
+  <a href="#math"><button class="nav-button">Math Projects</button></a>
+</nav>
+
+<section id="about">
   <h2>About Me</h2>
-  <p>I am a PhD student in Mathematics, at University of Illinois, Urbana Champaign. My research interests include Stein's Method, Random Graphs, Minimal Spanning Trees. I got my Master's in Mathematics at University of Illinois, Urbana Champaign in 2024. I graduated with a BE in Electronics and Communication Engineering from Chaitanya Bharathi Institute of Technology in 2019.</p>
+  <p>
+    I am a PhD student in Mathematics at the University of Illinois Urbana-Champaign.
+    My research interests include Stein's Method, Random Graphs, and Minimal Spanning Trees.
+    I received my Master's in Mathematics from UIUC in 2024 and my BE in Electronics and
+    Communication Engineering from Chaitanya Bharathi Institute of Technology in 2019.
+  </p>
 </section>
 
-<!-- <section>
+<section id="research">
   <h2>Research</h2>
   <ul>
-    <li>Simulation of friend-of-friend networks using Python.</li>
-    <li>Central Limit Theorem for degree counts in random graphs.</li>
-    <li>Spectral recovery of sparse graphs.</li>
+    <li>Simulation and analysis of friend-of-a-friend networks using Python.</li>
+    <li>Limit theorems for degree distributions in random graphs.</li>
+    <li>Spectral recovery methods for sparse graph structures.</li>
   </ul>
-</section> -->
+</section>
 
-<section>
+<section id="teaching">
   <h2>Teaching</h2>
   <ul>
     <li>Math 234 — Calculus for Business, Fall 2025 (TA)</li>
@@ -48,13 +118,19 @@
   </ul>
 </section>
 
-<!-- <section>
-  <h2>Publications</h2>
+<section id="cv">
+  <h2>Curriculum Vitae</h2>
+  <p>You can download my CV <a href="Jaya_Manthripragada_CV.pdf" target="_blank">here</a>.</p>
+</section>
+
+<section id="math">
+  <h2>Math Projects & Notes</h2>
   <ul>
-    <li>On Random Trees and Limit Laws — Journal of Probabilistic Combinatorics, 2025</li>
-    <li>Spectral Recovery for Graphs — ArXiv, 2024</li>
+    <li><a href="#">Spectral Graph Theory Notes</a></li>
+    <li><a href="#">Probability & Stein’s Method Notes</a></li>
+    <li><a href="#">Friend-of-a-Friend Network Simulation (Python)</a></li>
   </ul>
-</section> -->
+</section>
 
 </body>
 </html>
