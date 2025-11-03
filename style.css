@@ -1,0 +1,58 @@
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+header {
+  background: #0d1b2a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: #ddd;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+nav a:hover, nav a.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0d1b2a;
+  color: white;
+  margin-top: 2rem;
+}
