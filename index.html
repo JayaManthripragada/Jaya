@@ -1,131 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaya Maheedhar Manthripragada</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f7fafc;
-      color: #1a202c;
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-
-    header {
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 0.3rem;
-    }
-
-    p { max-width: 800px; margin: auto; }
-
-    a { color: #3182ce; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.5rem 0 2rem;
-    }
-
-    .nav-button {
-      background-color: #3182ce;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    .nav-button:hover {
-      background-color: #2b6cb0;
-      transform: translateY(-2px);
-    }
-
-    section {
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaya Manthripragada</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1><a href="index.html">Jaya Manthripragada</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="math.html">Math</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Jaya Maheedhar Manthripragada</h1>
-  <p>PhD Student — Mathematics, University of Illinois, Urbana-Champaign</p>
-  <p>Email: jm66[at]illinois[dot]edu</p>
-</header>
+  <main>
+    <section class="intro">
+      <img src="assets/profile.jpg" alt="Profile photo of Jaya Manthripragada" class="profile-img" />
+      <div>
+        <h2>Welcome!</h2>
+        <p>
+          I am a PhD student in Mathematics at the University of Illinois Urbana-Champaign. 
+          My research interests include probability theory, stochastic processes, and graph theory.
+        </p>
+        <p>
+          You can download my CV 
+          <a href="https://drive.google.com/file/d/1TzLF_Cl_snb06A6AuEj2HGcUZtGXWsHm/view?usp=sharing" target="_blank">here</a>.
+        </p>
+      </div>
+    </section>
+  </main>
 
-<nav>
-  <a href="#research"><button class="nav-button">Research</button></a>
-  <a href="#teaching"><button class="nav-button">Teaching</button></a>
-  <a href="#cv"><button class="nav-button">CV</button></a>
-  <a href="#math"><button class="nav-button">Math Projects</button></a>
-</nav>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a PhD student in Mathematics at the University of Illinois Urbana-Champaign.
-    My research interests include Stein's Method, Random Graphs, and Minimal Spanning Trees.
-    I received my Master's in Mathematics from UIUC in 2024 and my BE in Electronics and
-    Communication Engineering from Chaitanya Bharathi Institute of Technology in 2019.
-  </p>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-  
-
-<section id="teaching">
-  <h2>Teaching</h2>
-  <ul>
-    <li>Math 234 — Calculus for Business, Fall 2025 (TA)</li>
-    <li>Math 231 — Calculus II, Spring 2025 (TA)</li>
-    <li>Math 231 — Calculus II, Fall 2024 (TA)</li>
-    <li>Math 117 — Elementary Mathematics, Spring 2024 (TA)</li>
-    <li>Math 101 — Thinking Mathematically, Fall 2023 (TA)</li>
-    <li>Math 234 — Calculus for Business, Spring 2023 (TA)</li>
-  </ul>
-</section>
-
-<section id="cv">
-  <h2>Curriculum Vitae</h2>
-  <p>You can download my CV  <a href="https://drive.google.com/file/d/1TzLF_Cl_snb06A6AuEj2HGcUZtGXWsHm/view?usp=sharing" target="_blank">
-    here </a>.</p>
-</section>
-
-<section id="math">
-  <h2>Math Projects & Notes</h2>
-  <ul>
-    <li><a href="#">Illinois Math Lab: Eigenvector Centrality Preferential Attachment Model - Fall 2025</a></li>
-    <li><a href="#">Directed reading program: Mentored on Random Graphs and Complex networks</a></li>
-  </ul>
-</section>
-
+  <footer>
+    <p>© 2025 Jaya Manthripragada · <a href="mailto:jaya@example.com">Contact</a></p>
+  </footer>
 </body>
 </html>
