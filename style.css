@@ -87,10 +87,10 @@ main {
 
 .profile-img {
   display: block;
-  width: 150px;
+  width: 180px;
   height: auto;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 6px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
