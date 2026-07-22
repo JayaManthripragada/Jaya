@@ -1,3 +1,14 @@
+/* Apply predictable sizing everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Georgia", serif;
   line-height: 1.6;
@@ -6,13 +17,21 @@ body {
   color: #222;
 }
 
+/* Header */
 header {
   background: #0d1b2a;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem clamp(1rem, 3vw, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  line-height: 1.25;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 header h1 a {
@@ -20,21 +39,34 @@ header h1 a {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: clamp(0.8rem, 2vw, 2rem);
+}
+
 nav a {
   color: #ddd;
-  margin: 0 1rem;
+  margin: 0;
+  padding-bottom: 0.15rem;
+  border-bottom: 2px solid transparent;
   text-decoration: none;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: white;
-  border-bottom: 2px solid white;
+  border-bottom-color: white;
 }
 
+/* Main page content */
 main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  width: min(1200px, calc(100% - 4rem));
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
 }
 
 .intro {
@@ -44,93 +76,98 @@ main {
 }
 
 .profile-img {
+  display: block;
   width: 150px;
+  height: auto;
+  flex-shrink: 0;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #0d1b2a;
-  color: white;
-  margin-top: 2rem;
-}
-
-/* ==========================================================================
-   Mobile-Friendly Responsive Styling
-   ========================================================================== */
-@media (max-width: 768px) {
-    /* Prevent horizontal overflow scrolling */
-    body {
-        width: 100%;
-        overflow-x: hidden;
-        padding: 10px;
-    }
-
-    /* Stack header branding and navigation links vertically */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    /* Wrap and center the navigation bar menus */
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 10px;
-    }
-
-    /* Transform side-by-side profile split into a centered column layout */
-    .intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    /* Format profile image to prevent massive stretching or shrinking */
-    .profile-img {
-        max-width: 220px;
-        width: 80%;
-        height: auto;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
-
-    /* Ensure text copy fits nicely without hitting device edges */
-    main {
-        padding: 10px;
-    }
-}
+/* Research poster */
 .research-poster {
-  width: min(1200px, calc(100vw - 2rem));
-  margin: 1.5rem 50% 2.5rem;
-  transform: translateX(-50%);
+  width: 100%;
+  margin: 1.75rem 0 2.5rem;
+  padding: 0;
   text-align: center;
+}
+
+.research-poster a {
+  display: block;
+  width: 100%;
+  line-height: 0;
 }
 
 .research-poster img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
   border: 1px solid #d8d8d8;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
 }
 
 .research-poster img:hover {
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.17);
 }
 
 .research-poster figcaption {
   margin-top: 0.75rem;
   color: #555;
   font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #0d1b2a;
+  color: white;
+  text-align: center;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 0.6rem 1rem;
+  }
+
+  main {
+    width: calc(100% - 2rem);
+    padding: 1.5rem 0;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: min(220px, 80%);
+    margin: 0 auto;
+  }
+
+  .research-poster {
+    margin: 1.25rem 0 2rem;
+  }
+
+  .research-poster img {
+    border-radius: 4px;
+  }
 }
