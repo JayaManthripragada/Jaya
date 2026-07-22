@@ -15,6 +15,10 @@ body {
   margin: 0;
   background-color: #fdfdfd;
   color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -63,10 +67,16 @@ nav a.active {
 
 /* Main page content */
 main {
-  width: min(1200px, calc(100% - 4rem));
+  flex: 1;
+  width: min(860px, calc(100% - 2rem));
   max-width: none;
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  padding: 3rem 0;
+}
+
+/* Only the poster page gets additional width */
+body.math-page main {
+  width: min(1040px, calc(100% - 2rem));
 }
 
 .intro {
@@ -84,10 +94,9 @@ main {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Research poster */
 .research-poster {
   width: 100%;
-  margin: 1.75rem 0 2.5rem;
+  margin: 1.75rem 0 3rem;
   padding: 0;
   text-align: center;
 }
@@ -101,38 +110,35 @@ main {
 .research-poster img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
-  object-fit: contain;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #d8dce2;
   border-radius: 6px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-}
-
-.research-poster img:hover {
-  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 4px 14px rgba(13, 27, 42, 0.12);
 }
 
 .research-poster figcaption {
-  margin-top: 0.75rem;
-  color: #555;
-  font-size: 0.95rem;
+  margin-top: 0.7rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
-
 /* Footer */
 footer {
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 1rem;
   background: #0d1b2a;
   color: white;
   text-align: center;
 }
 
-/* Mobile layout */
+footer p {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   body {
+    width: auto;
     padding: 0;
-    overflow-x: hidden;
   }
 
   header {
@@ -146,28 +152,25 @@ footer {
     gap: 0.6rem 1rem;
   }
 
-  main {
+  main,
+  body.math-page main {
     width: calc(100% - 2rem);
-    padding: 1.5rem 0;
+    padding: 1.75rem 0;
   }
 
   .intro {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    padding: 0;
-    text-align: center;
   }
 
   .profile-img {
-    width: min(220px, 80%);
+    width: min(200px, 80%);
+    height: auto;
     margin: 0 auto;
   }
 
   .research-poster {
     margin: 1.25rem 0 2rem;
-  }
-
-  .research-poster img {
-    border-radius: 4px;
   }
 }
