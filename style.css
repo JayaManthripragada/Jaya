@@ -109,30 +109,28 @@ footer {
         padding: 10px;
     }
 }
-.poster-section {
-  margin: 1.5rem 0 2.5rem;
+.research-poster {
+  width: min(1200px, calc(100vw - 2rem));
+  margin: 1.5rem 50% 2.5rem;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
-.poster-viewer {
+.research-poster img {
   display: block;
   width: 100%;
-  height: 85vh;
-  min-height: 600px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #f7f7f7;
+  height: auto;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.poster-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.research-poster img:hover {
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+}
+
+.research-poster figcaption {
   margin-top: 0.75rem;
-}
-
-@media (max-width: 700px) {
-  .poster-viewer {
-    height: 70vh;
-    min-height: 450px;
-  }
+  color: #555;
+  font-size: 0.95rem;
 }
