@@ -1,47 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Teaching | Jaya M. Manthripragada</title>
+  <meta name="description" content="Teaching experience at the University of Illinois Urbana-Champaign: mathematics courses taught by Jaya M. Manthripragada." />
+  <script src="theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header>
-    <h1><a href="index.html">Jaya M. Manthripragada</a></h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html" class="active">Teaching</a>
-      <a href="projects.html">Projects</a>
-      <a href="math.html">Other Math Related</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner site-width">
+      <a class="brand" href="index.html" aria-label="Jaya M. Manthripragada, home">
+        <span class="brand-name">Jaya M. Manthripragada</span>
+        <span class="brand-subtitle">Probability · Random graphs</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html" aria-current="page">Teaching</a>
+        <a href="activities.html">Activities</a>
+      </nav>
+      <div class="theme-controls" role="group" aria-label="Color theme">
+        <button class="theme-button" type="button" data-set-theme="light" aria-label="Light theme" aria-pressed="false" title="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span>Light</span></button>
+        <button class="theme-button" type="button" data-set-theme="dark" aria-label="Dark theme" aria-pressed="false" title="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13.2A8.8 8.8 0 0 1 10.8 3.2 8.8 8.8 0 1 0 20.8 13.2Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
   </header>
-
-  <main>
-    <h2>Teaching</h2>
-    
-    <h3>Standalone Instructor:</h3>
-    
-    <ul>
-      <li><b>Math 117:</b> Elementary Mathematics - Spring 2026</li>
-    </ul>
-    
-    <h3>Discussion TA:</h3>
-   
-    <ul>
-      <li><b>Math 234:</b> Calculus for Business – Fall 2025, Spring 2023*</li>
-      <li><b>Math 231:</b> Calculus II – Spring 2025*, Fall 2024*</li>
-      <li><b>Math 220:</b> Calculus – Fall 2026</li>
-      <li><b>Math 117:</b> Elementary Mathematics – Spring 2024</li>
-      <li><b>Math 101:</b> Thinking Mathematically – Fall 2023</li>
-    </ul>
-
-    <p> * : Voted exceptional in end-of-semester evaluations.
+  <main id="main" class="site-width" tabindex="-1">
+    <header class="page-intro">
+      <p class="eyebrow">University of Illinois Urbana–Champaign</p>
+      <h1>Teaching</h1>
+      <p class="page-description">Mathematics courses I have taught as a standalone instructor and discussion teaching assistant at Illinois.</p>
+    </header>
+    <div class="page-content">
+      <section class="content-section" aria-labelledby="instructor-title">
+        <h2 class="section-title" id="instructor-title">Standalone instructor</h2>
+        <table class="course-table" aria-label="Courses taught as a standalone instructor">
+          <thead><tr><th scope="col">Course</th><th scope="col">Title</th><th scope="col">Semester</th></tr></thead>
+          <tbody><tr><td>Math 117</td><td>Elementary Mathematics</td><td>Spring 2026</td></tr></tbody>
+        </table>
+      </section>
+      <section class="content-section" aria-labelledby="ta-title">
+        <h2 class="section-title" id="ta-title">Discussion teaching assistant</h2>
+        <table class="course-table" aria-label="Courses taught as a discussion teaching assistant">
+          <thead><tr><th scope="col">Course</th><th scope="col">Title</th><th scope="col">Semester</th></tr></thead>
+          <tbody>
+            <tr><td>Math 220</td><td>Calculus</td><td>Fall 2026</td></tr>
+            <tr><td>Math 234</td><td>Calculus for Business</td><td>Fall 2025, Spring 2023*</td></tr>
+            <tr><td>Math 231</td><td>Calculus II</td><td>Spring 2025*, Fall 2024*</td></tr>
+            <tr><td>Math 117</td><td>Elementary Mathematics</td><td>Spring 2024</td></tr>
+            <tr><td>Math 101</td><td>Thinking Mathematically</td><td>Fall 2023</td></tr>
+          </tbody>
+        </table>
+        <p class="evaluation-note">* Voted exceptional in end-of-semester evaluations.</p>
+      </section>
+    </div>
   </main>
-
-  <footer>
-    <p>© 2025 Jaya Manthripragada</p>
+  <footer class="site-footer">
+    <div class="footer-inner site-width">
+      <nav class="footer-links" aria-label="Contact and profiles">
+        <a href="mailto:jm66@illinois.edu">Email ↗</a>
+        <a href="https://scholar.google.com/citations?user=0N9PtoYAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+        <a href="https://github.com/JayaManthripragada" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://drive.google.com/file/d/1vXz3GD7QmXcRA6JkdIUIz5NjS-eX-PNE/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV ↗</a>
+      </nav>
+      <span class="copyright">© 2026 Jaya Manthripragada</span>
+    </div>
   </footer>
 </body>
 </html>
